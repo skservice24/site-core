@@ -1,0 +1,53 @@
+header .l-head__phones .dropdown-menu.show a {
+
+}
+
+header .l-head__phones .dropdown-menu.show a:nth-child(2)::before {
+    content: '';
+    background-image: url(/bitrix/templates/megamart_default/assets/images/icons/whatsappp.svg);
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-size: cover;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.l-compact-menu.is-open .phone-wrap a:nth-child(2)::before {
+    content: '';
+    background-image: url(/bitrix/templates/megamart_default/assets/images/icons/whatsappp.svg);
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-size: cover;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+
+
+footer .foot-phones-wrap a:nth-child(2)::before {
+    content: '';
+    background-image: url(/bitrix/templates/megamart_default/assets/images/icons/whatsappp.svg);
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-size: cover;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.whatsapp-wrap-icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon-whats {
+    background-image: url(/bitrix/templates/megamart_default/assets/images/icons/whatsappp.svg);
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-size: cover;
+    vertical-align: bottom;
+    margin-right: 4px;
+}

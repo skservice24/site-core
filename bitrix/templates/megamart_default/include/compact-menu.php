@@ -87,7 +87,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) {
 					}
 
 					if (file_exists($sPhonesPath)) {
-						?><div class="my-5"><?
+						?><div class="my-5 phone-wrap"><?
 							include $sPhonesPath;
 						?></div><?
 					}

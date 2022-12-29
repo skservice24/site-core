@@ -72,7 +72,31 @@ if (!$hasBanner || RS_MM_BANNER_TYPE != 'underlay')
 						?>
 					</div>
 
-					<div class="l-head__search d-flex flex-md-grow-1 flex-xl-grow-0 align-items-center mx-4">
+					<div class="l-head__phones d-block mx-4">
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_DIR.'/include/header/phones_2.php',
+							array(),
+							array(
+								'SHOW_BORDER' => false
+							)
+						);
+						?>
+					</div>
+
+					<div class="d-block my-4">
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_DIR.'/include/footer/emails.php',
+							array(),
+							array(
+								'SHOW_BORDER' => false
+							)
+						);
+						?>
+					</div>
+
+					<div class="l-head__search d-flex flex-md-grow-1 flex-lg-grow-0 align-items-center mx-4">
 						<?php
 						$APPLICATION->IncludeFile(
 							SITE_DIR.'/include/header/search_form.php',
@@ -97,7 +121,7 @@ if (!$hasBanner || RS_MM_BANNER_TYPE != 'underlay')
 							?>
 						</div>
 
-						<?php
+						<?/*php
 						$APPLICATION->IncludeComponent(
 							'rsmm:ui.widget',
 							'favorite-icon',
@@ -130,7 +154,7 @@ if (!$hasBanner || RS_MM_BANNER_TYPE != 'underlay')
 								'HIDE_ICONS' => 'Y'
 							)
 						);
-						?>
+						*/?>
 					</div>
 
 				</div>

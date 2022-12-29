@@ -36,7 +36,7 @@ Loc::loadMessages($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH.'/footer.php');
 						?>
 					</div>
 
-					<div class="d-block my-4">
+					<div class="d-block my-4 foot-phones-wrap">
 						<?php
 						$APPLICATION->IncludeFile(
 							SITE_DIR.'/include/footer/phones.php',
