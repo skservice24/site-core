@@ -1,0 +1,43 @@
+# development environment
+.idea
+.DS_Store
+.vscode
+
+# bitrix
+!/bitrix
+/bitrix/*
+!/bitrix/templates/
+
+/upload
+.htaccess
+.htsecure
+web.config
+
+/.deploy/
+/.deploy/log/
+
+# logs, backups, temp & test, old
+/*.sql
+*.txt
+*.xml
+*.tmp
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.xml
+/files
+/test
+/webstat
+/syslog
+/logs
+/_log
+__*
+*_old*
+
+/map_files/
+/marketplace/
+
+# Testing
+/test/
+/vendor/

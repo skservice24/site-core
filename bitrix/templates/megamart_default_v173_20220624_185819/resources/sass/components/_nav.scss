@@ -1,0 +1,113 @@
+.nav-container {
+	color: $white;
+	position: relative;
+
+	&:after {
+		background: linear-gradient(90deg, transparent 0%, currentColor 80%, currentColor 100%);
+		bottom: 0;
+		content: '';
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1rem;
+	}
+}
+
+.nav-wrap {
+	display: flex;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		width:  0;
+	}
+
+	.nav {
+		color: $body-color;
+		display: block;
+		white-space: nowrap;
+	}
+
+	.nav-item {
+		float: none;
+		display: inline-block;
+	}
+}
+
+.nav-slide {
+	position: relative;
+	max-width: none;
+
+	& > li {
+		margin: 0;
+		padding-left: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.nav-item:first-child {
+		> .nav-link {
+			padding-left: 1rem;
+		}
+	}
+	.nav-item:nth-last-child(-n+2) {
+		> .nav-link {
+			padding-right: 1rem;
+		}
+	}
+
+	.nav-link {
+		color: $extra;
+
+		&:hover,
+		&:active,
+		&.active {
+			color: theme-color('primary');
+		}
+	}
+
+	.nav-slide-line {
+		position: absolute;
+		bottom: .31rem;
+		height: .13rem;
+		background-color: theme-color('primary');
+		transition: all .3s ease;
+		z-index: 1;
+	}
+}
+
+.nav-scrollspy {
+
+	$icon-width: 1.5rem;
+
+	.nav-link {
+		color: $extra;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&:not(.active) .nav-item:first-child .nav-link,
+	.nav-link:hover,
+	.nav-link:active,
+	.nav-link.active {
+		color: theme-color('primary');
+
+		.nav-link-icon {
+			opacity: 1;
+		}
+	}
+
+	.nav-link:hover {
+		.nav-link-icon {
+			opacity: 0;
+		}
+	}
+
+	.nav-link-icon {
+		font-size: $icon-width;
+		margin: 0 map-get($spacers, 3) 0 map-get($spacers, 4);
+		opacity: 0;
+	}
+}

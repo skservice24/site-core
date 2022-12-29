@@ -1,0 +1,39 @@
+/*!
+ * Waves v0.7.6
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE */
+
+
+.waves-effect {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	user-select: none;
+
+	.waves-ripple {
+		position: absolute;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		margin-top:-50px;
+		margin-left:-50px;
+		opacity: 0;
+		background: rgba(0,0,0,0.2);
+
+		transition:
+			opacity 0.15s ease-in 0s,
+			transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+		transition-property: transform, opacity;
+		transform: scale(0) translate(0,0);
+		pointer-events: none;
+	}
+
+	&.waves-base .waves-ripple {
+		opacity: .1;
+		background: currentColor;
+	}
+}
