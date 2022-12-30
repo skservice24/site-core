@@ -97,3 +97,64 @@ header .l-head__line-inner.d-flex {
     max-width: 140px;
     object-fit: cover;
 }
+
+.compact-catalog-item .headers-links-main-menu {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.compact-other-item .headers-links-main-menu {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.compact-other-item .mmenu-type1-item__link.waves-effect.waves-effect.waves-base {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.l-head__main.main-main-menu {
+    display: none
+}
+
+.l-head__main.main-main-menu.is-active-menu {
+    display: block
+}
+
+.l-head__main.main-menu-compact {
+    display: none;
+}
+
+.l-head__main.main-menu-compact.is-active-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.l-head__main.main-menu-compact.is-active-menu .brands-menu-block {
+    top: 78px;
+}
+
+@media (max-width: 1024px) {
+    .l-head__main.main-menu-compact.is-active-menu .mail-block-wrap {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .l-head__main.main-main-menu, .l-head__main.main-menu-compact {
+        display: none !important;
+    }
+}
+
+/*.l-head__main.main-menu-compact.is-active-menu .mmenu-type1-item.mmenu-type1-item--primary:last-child {*/
+/*    display: none !important;*/
+/*}*/
+
+/*@media (max-width: 1366px) {*/
+/*    .l-head__main.main-menu-compact.is-active-menu .mmenu-type1-item.mmenu-type1-item--primary:last-child {*/
+/*        display: block !important;*/
+/*    }*/
+/*}*/

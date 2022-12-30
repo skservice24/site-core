@@ -193,20 +193,42 @@ RS.MainMenu = (function() {
 })();
 
 $(document).ready(function() {
-	const brandMenuBlock = document.querySelector('.brands-menu-block')
+	let headerMainMenu = $('.main-main-menu')
+	let headerCompactMenu = $('.main-menu-compact')
+	let scrollPrev = 0
+
+	const brandMenuBlock = document.querySelectorAll('.brands-menu-block')
 	const linksMainMenu = document.querySelectorAll('.headers-links-main-menu')
 
-	linksMainMenu.forEach(elem => {
-		elem.addEventListener('mouseenter', e => {
-			if(e.target.className.includes('brands-top-menu-btn')) {
-				brandMenuBlock.classList.add('is-active')
-			} else {
-				brandMenuBlock.classList.remove('is-active')
-			}
+	brandMenuBlock.forEach(btn => {
+		linksMainMenu.forEach(elem => {
+			elem.addEventListener('mouseenter', e => {
+				if(e.target.className.includes('brands-top-menu-btn')) {
+					btn.classList.add('is-active')
+				} else {
+					btn.classList.remove('is-active')
+				}
+			});
+		});
+
+		btn.addEventListener('mouseleave', e => {
+			btn.classList.remove('is-active')
 		});
 	});
 
-	brandMenuBlock.addEventListener('mouseleave', e => {
-		brandMenuBlock.classList.remove('is-active')
-	});
+	$(window).scroll(function () {
+		let scrolled = $(window).scrollTop()
+
+		if(scrolled > 215) {
+			headerMainMenu.removeClass('is-active-menu')
+			headerCompactMenu.addClass('is-active-menu')
+		}
+
+		if (scrolled === 0) {
+			headerMainMenu.addClass('is-active-menu')
+			headerCompactMenu.removeClass('is-active-menu')
+		}
+
+		scrollPrev = scrolled
+	})
 });
