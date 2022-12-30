@@ -59,7 +59,7 @@ if (count($arResult) > 0):
 		}
 		?>
 		<div class="<?=$sItemClass?>">
-			<a href="<?=$arParams['CATALOG_LINK']?>" class="mmenu-vertical-item__link">
+			<a href="<?=$arParams['CATALOG_LINK']?>" class="mmenu-vertical-item__link headers-links-main-menu" style="background-color: #ff5605">
 				<svg class="icon-svg"><use xlink:href="#svg-view-card"></use></svg>
 				Каталог
 				<svg class="icon-svg mmenu-vertical-item__chevron-down"><use xlink:href="#svg-chevron-down"></use></svg>

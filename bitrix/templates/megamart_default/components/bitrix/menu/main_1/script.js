@@ -191,3 +191,22 @@ RS.MainMenu = (function() {
 
 	return MainMenu;
 })();
+
+$(document).ready(function() {
+	const brandMenuBlock = document.querySelector('.brands-menu-block')
+	const linksMainMenu = document.querySelectorAll('.headers-links-main-menu')
+
+	linksMainMenu.forEach(elem => {
+		elem.addEventListener('mouseenter', e => {
+			if(e.target.className.includes('brands-top-menu-btn')) {
+				brandMenuBlock.classList.add('is-active')
+			} else {
+				brandMenuBlock.classList.remove('is-active')
+			}
+		});
+	});
+
+	brandMenuBlock.addEventListener('mouseleave', e => {
+		brandMenuBlock.classList.remove('is-active')
+	});
+});

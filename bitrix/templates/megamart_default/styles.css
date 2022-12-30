@@ -51,3 +51,49 @@ footer .foot-phones-wrap a:nth-child(2)::before {
     vertical-align: bottom;
     margin-right: 4px;
 }
+
+header .l-head__line-inner.d-flex {
+    position: relative;
+}
+
+.brands-title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.brands-menu-block {
+    display: none;
+}
+
+.brands-menu-block.is-active {
+    display: block;
+    position: absolute;
+    background: #fff;
+    top: 60px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    max-height: 870px;
+    box-shadow: 0 3px 5px #777f8c;
+    padding: 20px;
+}
+
+.brands-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.brand-elem {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.brand-img {
+    width: 100%;
+    max-width: 140px;
+    object-fit: cover;
+}

@@ -133,7 +133,7 @@ if (count($arResult) > 0):
 
 	?>
 	<div class="<?=$sItemClass?>">
-		<a href="<?=$arItem['LINK']?>" class="mmenu-type1-item__link"><?=$arItem['TEXT']?></a>
+		<a href="<?=$arItem['LINK']?>" class="mmenu-type1-item__link headers-links-main-menu<?if($arItem['LINK'] == '/brands/'):?> brands-top-menu-btn<?endif?>"><?=$arItem['TEXT']?></a>
 
 		<?php if ($isParent): ?>
 			<?php if ($arParams['CAN_WIDE'] == 'Y' && $arItem['PARAMS']['OPEN_TYPE'] == 'wide'): ?>
